@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <lets.heartworld.loadanimation.GradientRotation
+        android:id="@+id/loading"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <lets.heartworld.loadanimation.RotaryLine
+        android:id="@+id/loading1"
+        android:layout_marginTop="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <lets.heartworld.loadanimation.TransformationLoading
+        android:id="@+id/loading2"
+        android:layout_marginTop="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <lets.heartworld.loadanimation.JumpLoading
+        android:id="@+id/loading3"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#212121"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="开始动画"/>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#212121"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="停止动画"/>
+
+</LinearLayout>
