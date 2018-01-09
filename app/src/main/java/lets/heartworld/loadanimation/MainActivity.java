@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private RotaryLine loading1;
     private TransformationLoading loading2;
     private JumpLoading loading3;
+    private RotaryBall loading4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         loading1 = (RotaryLine) findViewById(R.id.loading1);
         loading2 = (TransformationLoading) findViewById(R.id.loading2);
         loading3 = (JumpLoading) findViewById(R.id.loading3);
+        loading4 = (RotaryBall) findViewById(R.id.loading4);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 loading1.startAnimate();
                 loading2.startAnimate();
                 loading3.startAnimate(0);
+                loading4.startAnimate();
             }
         });
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 loading1.stopAnimate();
                 loading2.stopAnimate();
                 loading3.stopAnimate();
+                loading4.stopAnimate();
             }
         });
     }
