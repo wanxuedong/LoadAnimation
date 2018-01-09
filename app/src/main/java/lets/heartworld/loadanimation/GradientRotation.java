@@ -59,7 +59,7 @@ public class GradientRotation extends View {
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
                 switch (msg.what) {
-                    case 1:
+                    case 2:
                         invalidate();     //重绘界面
                         break;
                 }
@@ -97,7 +97,7 @@ public class GradientRotation extends View {
                 @Override
                 public void run() {
                     Message message = new Message();
-                    message.what = 1;
+                    message.what = 2;
                     handler.sendMessage(message);
                 }
             }, time);

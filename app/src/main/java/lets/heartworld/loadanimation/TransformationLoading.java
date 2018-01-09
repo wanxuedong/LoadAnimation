@@ -67,7 +67,7 @@ public class TransformationLoading extends View {
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
                 switch (msg.what) {
-                    case 1:
+                    case 3:
                         invalidate();     //重绘界面
                         break;
                 }
@@ -179,7 +179,7 @@ public class TransformationLoading extends View {
             @Override
             public void run() {
                 Message message = new Message();
-                message.what = 1;
+                message.what = 3;
                 handler.sendMessage(message);
             }
         }, time);

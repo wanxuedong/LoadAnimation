@@ -65,7 +65,7 @@ public class RotaryBall extends View {
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
                 switch (msg.what) {
-                    case 1:
+                    case 4:
                         if (finishAnimateOne == 0) {
                             startAnimatorOne();
                         }
@@ -112,7 +112,7 @@ public class RotaryBall extends View {
         canvas.drawCircle(mCurrentPositionFive[0], mCurrentPositionFive[1], 3, circlePaintOne);
         if (currentStatus == -1) {
             Message message = new Message();
-            message.what = 1;
+            message.what = 4;
             handler.sendMessage(message);
         }
         if (animateOrNot) {
@@ -126,7 +126,7 @@ public class RotaryBall extends View {
                             Log.d("thread", "thread");
                             Thread.sleep(1600);
                             Message message = new Message();
-                            message.what = 1;
+                            message.what = 4;
                             handler.sendMessage(message);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
@@ -212,8 +212,8 @@ public class RotaryBall extends View {
             valueAnimatorOne.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
-                    float value = (Float) animation.getAnimatedValue();
                     // 获取当前点坐标封装到mCurrentPosition
+                    float value = (Float) animation.getAnimatedValue();
                     pathMeasure.getPosTan(value, mCurrentPositionOne, null);
                     postInvalidate();
                 }
